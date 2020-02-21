@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinUnid1"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/spinUnid2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinTipo" />
+
+    <Spinner
+        android:id="@+id/spinUnid2"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinUnid1"
+        app:layout_constraintTop_toBottomOf="@+id/spinTipo" />
+
+    <EditText
+        android:id="@+id/editValor"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Insira o valor"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtConversao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinUnid1" />
+
+    <TextView
+        android:id="@+id/txtConversao"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/editValor"
+        app:layout_constraintTop_toBottomOf="@+id/spinUnid2" />
+
+    <Button
+        android:id="@+id/btnConverter"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="onClickConversao"
+        android:text="Converter valor"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editValor" />
+
+    <Spinner
+        android:id="@+id/spinTipo"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="Franco Saravia Tavares\nFev / 2020"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConverter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

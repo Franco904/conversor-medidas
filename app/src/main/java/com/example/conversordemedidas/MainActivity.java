@@ -2,6 +2,7 @@ package com.example.conversordemedidas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinTipoConv;
     Spinner spinUnid;
     Spinner spinConv;
+    TextView tt = findViewById(R.id.txtTitulo);
+
+//    Typeface tf = Typeface.createFromAsset(getAssets(),  "fonts/confortaa.ttf");
+//    tt.setTypeface(tf);
 
     final String[] tipoConversao = new String[]{"Comprimento", "Área", "Volume", "Litros", "Massa", "Frequência", "Velocidade"};
 

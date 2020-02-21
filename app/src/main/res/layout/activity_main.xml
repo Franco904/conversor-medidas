@@ -12,10 +12,20 @@
     tools:context=".MainActivity">
 
     <Spinner
+        android:id="@+id/spinTipo"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtTitulo" />
+
+    <Spinner
         android:id="@+id/spinUnid1"
         android:layout_width="0dp"
         android:layout_height="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toStartOf="@+id/spinUnid2"
@@ -28,7 +38,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/spinUnid1"
         app:layout_constraintTop_toBottomOf="@+id/spinTipo" />
@@ -37,7 +47,7 @@
         android:id="@+id/editValor"
         android:layout_width="0dp"
         android:layout_height="39dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
@@ -54,7 +64,7 @@
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
@@ -66,24 +76,15 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="85dp"
         android:background="@android:color/holo_blue_dark"
         android:onClick="onClickConversao"
         android:text="Converter valor"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editValor" />
-
-    <Spinner
-        android:id="@+id/spinTipo"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtInfo"
@@ -98,5 +99,18 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnConverter" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Converter unidades de medida: "
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp"
+        app:fontFamily="@font/armata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

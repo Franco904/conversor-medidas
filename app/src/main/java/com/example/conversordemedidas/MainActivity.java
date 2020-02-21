@@ -20,10 +20,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinTipoConv;
     Spinner spinUnid;
     Spinner spinConv;
-    TextView tt = findViewById(R.id.txtTitulo);
-
-//    Typeface tf = Typeface.createFromAsset(getAssets(),  "fonts/confortaa.ttf");
-//    tt.setTypeface(tf);
 
     final String[] tipoConversao = new String[]{"Comprimento", "Área", "Volume", "Litros", "Massa", "Frequência", "Velocidade"};
 

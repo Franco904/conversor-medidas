@@ -107,8 +107,8 @@
         android:layout_marginTop="20dp"
         android:text="Converter unidades de medida: "
         android:textColor="@android:color/holo_blue_light"
-        android:textSize="20sp"
-        app:fontFamily="@font/armata"
+        android:textSize="22sp"
+        app:fontFamily="sans-serif-thin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

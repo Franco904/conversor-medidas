@@ -90,7 +90,7 @@
         android:id="@+id/txtInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="170dp"
         android:text="Franco Saravia Tavares\nFev / 2020"
         android:textAlignment="center"
         android:textSize="14sp"

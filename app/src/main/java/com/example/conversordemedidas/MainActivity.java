@@ -2,12 +2,10 @@ package com.example.conversordemedidas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -21,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinUnid;
     Spinner spinConv;
 
-    final String[] tipoConversao = new String[]{"Comprimento", "Área", "Volume", "Litros", "Massa", "Frequência", "Velocidade"};
+    final String[] tipoConversao = new String[]{"Comprimento", "Área", "Volume", "Hectares", "Litros", "Massa", "Frequência", "Velocidade"};
 
 
     final String[] medidas1 = new String[]{"Milímetros", "Centímetros", "Decímetros", "Metros", "Decâmetros", "Hectômetros", "Quilometros"};
@@ -43,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
             "Decâmetros cúbicos", "Hectômetros cúbicos", "Quilometros cúbicos"};
 
 
+    final String[] medidashectares1 = new String[]{"Milímetros quadrados", "Centímetros quadrados", "Decímetros quadrados",
+            "Metros quadrados", "Decâmetros quadrados", "Hectômetros quadrados", "Quilometros quadrados"};
+
+    final String[] medidashectares2 = new String[]{"Hectares"};
+
+
     final String[] medidascapacidade1 = new String[]{"Milímetros cúbicos", "Centímetros cúbicos", "Decímetros cúbicos",
             "Metros cúbicos", "Decâmetros cúbicos", "Hectômetros cúbicos", "Quilometros cúbicos"};
 
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     final String[] medidasvelocidade1 = new String[]{"Metros por segundo", "Quilometros por hora"};
 
     final String[] medidasvelocidade2 = new String[]{"Metros por segundo", "Quilometros por hora"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,38 +116,47 @@ public class MainActivity extends AppCompatActivity {
 
                 if(position == 3){
 
-                    final ArrayAdapter<String> adapterUnid4 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidascapacidade1);
+                    final ArrayAdapter<String> adapterUnid4 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidashectares1);
                     spinUnid.setAdapter(adapterUnid4);
 
-                    final ArrayAdapter<String> adapterConv4 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidascapacidade2);
+                    final ArrayAdapter<String> adapterConv4 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidashectares2);
                     spinConv.setAdapter(adapterConv4);
                 }
 
                 if(position == 4){
 
-                    final ArrayAdapter<String> adapterUnid5 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasmassa1);
+                    final ArrayAdapter<String> adapterUnid5 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidascapacidade1);
                     spinUnid.setAdapter(adapterUnid5);
 
-                    final ArrayAdapter<String> adapterConv5 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasmassa2);
+                    final ArrayAdapter<String> adapterConv5 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidascapacidade2);
                     spinConv.setAdapter(adapterConv5);
                 }
 
                 if(position == 5){
 
-                    final ArrayAdapter<String> adapterUnid6 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasfrequencia1);
+                    final ArrayAdapter<String> adapterUnid6 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasmassa1);
                     spinUnid.setAdapter(adapterUnid6);
 
-                    final ArrayAdapter<String> adapterConv6 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasfrequencia2);
+                    final ArrayAdapter<String> adapterConv6 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasmassa2);
                     spinConv.setAdapter(adapterConv6);
                 }
 
                 if(position == 6){
 
-                    final ArrayAdapter<String> adapterUnid7 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasvelocidade1);
+                    final ArrayAdapter<String> adapterUnid7 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasfrequencia1);
                     spinUnid.setAdapter(adapterUnid7);
 
-                    final ArrayAdapter<String> adapterConv7 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasvelocidade2);
+                    final ArrayAdapter<String> adapterConv7 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasfrequencia2);
                     spinConv.setAdapter(adapterConv7);
+                }
+
+                if(position == 7){
+
+                    final ArrayAdapter<String> adapterUnid8 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasvelocidade1);
+                    spinUnid.setAdapter(adapterUnid8);
+
+                    final ArrayAdapter<String> adapterConv8 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, medidasvelocidade2);
+                    spinConv.setAdapter(adapterConv8);
                 }
             }
 
@@ -188,20 +202,29 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case 3:
+
+                    base = 100;
+                    expoente = escolhaConv - (escolhaUnid - 5);
+                    break;
+
+                case 4:
+
                     base = 1000;
                     expoente = escolhaConv - (escolhaUnid - 2);
                     break;
 
-                case 4:
                 case 5:
+                case 6:
+
                     base = 1000;
                     expoente = escolhaConv - escolhaUnid;
                     break;
 
-                case 6:
+                case 7:
                     base = 3.6;
                     expoente = escolhaUnid - escolhaConv;
                     break;
+
             }
 
             convertido = valor / Math.pow(base, expoente);

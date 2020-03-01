@@ -9,6 +9,7 @@
     android:paddingTop="15dp"
     android:paddingRight="15dp"
     android:paddingBottom="15dp"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <Spinner
@@ -26,9 +27,9 @@
         android:layout_width="0dp"
         android:layout_height="24dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/spinUnid2"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imTrocaConv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinTipo" />
 
@@ -36,11 +37,11 @@
         android:id="@+id/spinUnid2"
         android:layout_width="0dp"
         android:layout_height="24dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spinUnid1"
+        app:layout_constraintStart_toEndOf="@+id/imTrocaConv"
         app:layout_constraintTop_toBottomOf="@+id/spinTipo" />
 
     <EditText
@@ -112,5 +113,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imTrocaConv"
+        style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:onClick="onClickTroca"
+        app:layout_constraintEnd_toStartOf="@+id/spinUnid2"
+        app:layout_constraintStart_toEndOf="@+id/spinUnid1"
+        app:layout_constraintTop_toBottomOf="@+id/spinTipo"
+        app:srcCompat="@drawable/ic_compare_arrows_blue_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

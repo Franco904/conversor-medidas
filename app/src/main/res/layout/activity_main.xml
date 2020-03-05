@@ -77,13 +77,13 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
-        android:background="@android:color/holo_blue_dark"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/shape"
         android:onClick="onClickConversao"
         android:text="Converter valor"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editValor" />
 
@@ -129,6 +129,6 @@
         app:layout_constraintEnd_toStartOf="@+id/spinUnid2"
         app:layout_constraintStart_toEndOf="@+id/spinUnid1"
         app:layout_constraintTop_toBottomOf="@+id/spinTipo"
-        app:srcCompat="@drawable/ic_compare_arrows_blue_24dp" />
+        app:srcCompat="@drawable/ic_swap_horiz_blue_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

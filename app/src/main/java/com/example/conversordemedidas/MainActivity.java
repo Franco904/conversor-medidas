@@ -2,15 +2,8 @@ package com.example.conversordemedidas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.animation.ObjectAnimator;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     ImageButton imTroca;
     EditText valorConverter;
     TextView valorConvertido;
-    Button btnConversao;
 
     boolean orig;
 
@@ -366,8 +358,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
-
-
     }
 }
 
